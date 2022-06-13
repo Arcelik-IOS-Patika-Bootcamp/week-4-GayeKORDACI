@@ -8,5 +8,45 @@
 import Foundation
 
 class CryptoCurrencyViewModel {
+    
+    var isRefreshing: ((Bool) -> Void)?
+    var didUpdateCryptos: (([CryptoDesignModel]) -> Void)?
+    var didSelecteCryptos: ((String) -> Void)?
+    
+    private(set) var cryptos: [CryptoCurrency] = [CryptoCurrency]() {
+        didSet {
+            didUpdateCryptos?(cryptos.map { CryptoDesignModel(crypto: $0) })
+        }
+    }
+    
+    // Dependencies
+    private let networkingService: NetworkingService
+    
+    init(networkingService: NetworkingService) {
+        self.networkingService = networkingService
+    }
+    
+    // Inputs
+    func ready() {
+        isRefreshing?(true)
+        
+        networkingService.fetchCoins { cryptos in
+            self.isRefreshing?(false)
+            self.cryptos = cryptos
+        }
+    }
+    
+    func didSelectRow(at indexPath: IndexPath) {
+        if cryptos.isEmpty { return }
+        didSelecteCryptos?(cryptos[indexPath.item].id ?? "")
+    }
+}
 
+
+struct CryptoDesignModel {
+    let cryptoCurrency: CryptoCurrency
+    
+    init(crypto: CryptoCurrency) {
+        self.cryptoCurrency = crypto
+    }
 }
