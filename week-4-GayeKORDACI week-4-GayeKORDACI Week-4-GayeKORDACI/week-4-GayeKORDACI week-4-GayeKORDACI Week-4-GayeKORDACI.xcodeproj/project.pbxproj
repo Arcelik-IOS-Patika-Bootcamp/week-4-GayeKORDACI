@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5330E69D2857C17C000CAFC1 /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330E69C2857C17C000CAFC1 /* CryptoTableViewCell.swift */; };
 		539A8D992857B99C00C2666A /* NetworkingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A8D982857B99C00C2666A /* NetworkingApi.swift */; };
 		539A8D9E2857B9BE00C2666A /* CryptoCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A8D9C2857B9BE00C2666A /* CryptoCurrencyViewController.swift */; };
 		539A8D9F2857B9BE00C2666A /* CryptoCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A8D9D2857B9BE00C2666A /* CryptoCurrencyViewModel.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5330E69C2857C17C000CAFC1 /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 		539A8D982857B99C00C2666A /* NetworkingApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingApi.swift; sourceTree = "<group>"; };
 		539A8D9C2857B9BE00C2666A /* CryptoCurrencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyViewController.swift; sourceTree = "<group>"; };
 		539A8D9D2857B9BE00C2666A /* CryptoCurrencyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyViewModel.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		539A8D9B2857B9BE00C2666A /* CryptoCurrencyScene */ = {
 			isa = PBXGroup;
 			children = (
+				5330E69C2857C17C000CAFC1 /* CryptoTableViewCell.swift */,
 				539A8D9C2857B9BE00C2666A /* CryptoCurrencyViewController.swift */,
 				539A8D9D2857B9BE00C2666A /* CryptoCurrencyViewModel.swift */,
 			);
@@ -176,6 +179,7 @@
 				53FA1FF928568266002639FC /* AppDelegate.swift in Sources */,
 				539A8D9F2857B9BE00C2666A /* CryptoCurrencyViewModel.swift in Sources */,
 				53FA1FFB28568266002639FC /* SceneDelegate.swift in Sources */,
+				5330E69D2857C17C000CAFC1 /* CryptoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
