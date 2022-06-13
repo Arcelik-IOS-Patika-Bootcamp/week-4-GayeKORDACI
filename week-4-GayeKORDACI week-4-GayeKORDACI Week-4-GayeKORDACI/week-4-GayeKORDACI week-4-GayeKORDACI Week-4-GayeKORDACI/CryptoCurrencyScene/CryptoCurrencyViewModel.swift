@@ -38,15 +38,16 @@ class CryptoCurrencyViewModel {
     
     func didSelectRow(at indexPath: IndexPath) {
         if cryptos.isEmpty { return }
-        didSelecteCryptos?(cryptos[indexPath.item].id ?? "")
+        didSelecteCryptos?(cryptos[indexPath.item].explorer ?? "")
     }
 }
 
 
 struct CryptoDesignModel {
     let cryptoCurrency: CryptoCurrency
-    
+    let imageString: String?
     init(crypto: CryptoCurrency) {
         self.cryptoCurrency = crypto
+        self.imageString = cryptoCurrency.symbol?.lowercased()
     }
 }
